@@ -20,6 +20,12 @@ INSTALLED_APPS += [
     "debug_toolbar",
 ]
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
+
 LOGGING["loggers"]["django.request"]["level"] = "DEBUG"
 
 FORCE_SCRIPT_NAME = secrets.FORCE_SCRIPT_NAME
