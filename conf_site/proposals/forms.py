@@ -29,3 +29,19 @@ class ProposalForm(forms.ModelForm):
                 u"The description must be less than 400 characters"
             )
         return value
+
+
+class TutorialForm(ProposalForm):
+    """
+    Custom form for Carolinas tutorials with custom help text.
+
+    See http://stackoverflow.com/a/3287893/113527.
+
+    """
+    def __init__(self, *args, **kwargs):
+        super(ProposalForm, self).__init__(*args, **kwargs)
+        # Add additional "additional_notes" help text.
+        self.fields["additional_notes"].help_text += (
+            "<br><strong>Please let us know if you would prefer a "
+            "90 minute or 120 minute tutorial.</strong>"
+        )

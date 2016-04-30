@@ -257,7 +257,7 @@ CONFERENCE_ID = 1
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/"
 PROPOSAL_FORMS = {
     "talk": "conf_site.proposals.forms.ProposalForm",
-    "tutorial": "conf_site.proposals.forms.ProposalForm",
+    "tutorial": "conf_site.proposals.forms.TutorialForm",
 }
 
 # pinax-theme-bootstrap settings
